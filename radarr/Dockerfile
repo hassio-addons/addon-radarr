@@ -18,8 +18,7 @@ apk add --no-cache \
     xmlstarlet=1.6.1-r2 \
   \
   && if [ "${BUILD_ARCH}" = "aarch64" ]; then RADARR_ARCH="arm64"; \
-  elif [ "${BUILD_ARCH}" = "amd64" ]; then RADARR_ARCH="x64"; \
-  elif [ "${BUILD_ARCH}" = "armv7" ]; then RADARR_ARCH="arm"; fi \
+  elif [ "${BUILD_ARCH}" = "amd64" ]; then RADARR_ARCH="x64"; fi \
   \
   && curl -J -L -o /tmp/radarr.tar.gz \
       "https://github.com/Radarr/Radarr/releases/download/v${RADARR_VERSION}/Radarr.master.${RADARR_VERSION}.linux-musl-core-${RADARR_ARCH}.tar.gz" \
